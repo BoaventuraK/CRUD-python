@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">7
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="{% url 'salvar' %}">
+        <input type="text" name="tipo">
+        <input type="text" name="cor">
+        <input type="text" name="marca">
+        <input type="text" name="modelo">
+        <input type="text" name="estado">
+        <input type="text" name="leilao">
+        <input type="text" name="f_pagamento">
+        <input type="number" name="ano">
+        <input type="number" name="km_rodado">
+
+        <button type="submit"></button>
+    </form>
+    
+</body>
+</html>

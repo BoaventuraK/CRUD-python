@@ -1,0 +1,42 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/teste.css' %}">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+
+        {{auto.id}} - {{auto.tipo}} - {{auto.cor}} - {{auto.marca}} - {{auto.modelo}} - {{auto.estado}} - {{auto.leilao}} - {{auto.f_pagamento}} - {{auto.ano}} - {{auto.km_rodado}}
+
+        <div class="form">
+            <div class="inp">
+        <form action="{% url 'update' auto.id %}" method="POST">
+            {% csrf_token %}
+            <input type="text" name="tipo" value="{{auto.tipo}}">
+            <input type="text" name="cor" value="{{auto.cor}}">
+            <input type="text" name="marca" value="{{auto.marca}}">
+            <input type="text" name="modelo" value="{{auto.modelo}}">
+            <input type="text" name="estado" value="{{auto.estado}}">
+            <input type="text" name="leilao" value="{{auto.leilao}}">
+            <input type="text" name="f_pagamento" value="{{auto.f_pagamento}}">
+            <input type="number" name="ano" value="{{auto.ano}}">
+            <input type="number" name="km_rodado" value="{{auto.km_rodado}}">
+
+            <button type="submit" class="btn">Editar</button>
+        </form>
+    </div>
+    </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
